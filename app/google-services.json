@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "101332054118",
+    "firebase_url": "https://dilibook-252cf-default-rtdb.firebaseio.com",
+    "project_id": "dilibook-252cf",
+    "storage_bucket": "dilibook-252cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101332054118:android:493d46818c99fa1c5dbda7",
+        "android_client_info": {
+          "package_name": "com.example.dilibook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101332054118-sivnoillp7e0ntf5l07eseln5aee9lu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCta_bCB9B02EE8H6fopKITh7eAhMOblvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101332054118-sivnoillp7e0ntf5l07eseln5aee9lu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

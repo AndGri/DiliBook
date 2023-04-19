@@ -2,10 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/windows"
     android:layout_width="match_parent"
     android:background="@drawable/bg"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
 
     <LinearLayout
@@ -52,16 +54,19 @@
             android:id="@+id/buttonSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:text="Sign in" />
+            android:layout_weight="1"
+            android:backgroundTint="#F3E354"
+            android:text="Sign in"
+            android:textColor="@android:color/white"
+            app:rippleColor="@color/yellow" />
 
         <Button
-            android:id="@+id/Register"
+            android:id="@+id/buttonRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#F3E354"
             android:textColor="@android:color/white"
             android:layout_marginLeft="10dp"
             android:text="Register" />
