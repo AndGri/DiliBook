@@ -58,20 +58,21 @@
             tools:ignore="MissingConstraints"
             android:layout_gravity="center_horizontal|top" />
 
-
     </LinearLayout>
 
-
-    <!--    <Button-->
-<!--        android:id="@+id/button3"-->
-<!--        android:layout_width="231dp"-->
-<!--        android:layout_height="123dp"-->
-<!--        android:backgroundTint="#F3E354"-->
-<!--        android:onClick="goBack"-->
-<!--        android:text="ВЫЙТИ"-->
-<!--        android:textColor="@android:color/white"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|left"
+        android:backgroundTint="#F3E354"
+        android:gravity="left"
+        android:onClick="goBack"
+        android:text="ВЫЙТИ"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </RelativeLayout>

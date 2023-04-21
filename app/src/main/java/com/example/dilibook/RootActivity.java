@@ -13,9 +13,9 @@ public class RootActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
     }
-//    public void goBack(View v){
-  //      Intent intent = new Intent(this, MainActivity.class);
-    //    startActivity(intent);
+    public void goBack(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
-   // }
+    }
 }
