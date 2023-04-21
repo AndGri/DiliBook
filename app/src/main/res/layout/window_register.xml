@@ -33,7 +33,6 @@
             android:textColorHint="@color/ripple"
             android:textSize="25sp"
             app:met_floatingLabel="normal"
-            app:met_minCharacters="4"
             />
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -48,7 +47,6 @@
             app:met_floatingLabel="normal"
             app:met_minCharacters="6"
             app:met_maxCharacters="20"
-
             />
 
 
