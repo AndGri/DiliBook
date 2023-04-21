@@ -18,4 +18,16 @@ public class RootActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void goToAttractions(View v){
+        Intent intent = new Intent(this, AttractionActivity.class);
+        startActivity(intent);
+    }
+    public void goToWalk(View v){
+        Intent intent = new Intent(this, ForWalkActivity.class);
+        startActivity(intent);
+    }
+    public void goToExpeditions(View v){
+        Intent intent = new Intent(this, ExpeditionsActivity.class);
+        startActivity(intent);
+    }
 }

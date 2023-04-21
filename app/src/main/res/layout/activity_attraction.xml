@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttractionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/button_back"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top|left"
+                android:backgroundTint="#F3E354"
+                android:gravity="left"
+                android:onClick="goBack"
+                android:text="НАЗАД"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="Улица Шарамбеяна (Старый Дилижан)"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:hint="Old Dilijan (Старый Дилижан) - это исторический район города Дилижан в Армении. В Old Dilijan можно увидеть прекрасные образцы армянской архитектуры, сохранившиеся до наших дней. Это каменные дома, построенные еще в 19 веке, узкие улочки, мощеные камнем, и множество маленьких церквей и капелл, которые великолепно сочетаются с окружающей природой.
+
+Кроме того, Old Dilijan славится своими мастерскими и галереями, где можно купить изделия из керамики, дерева, текстиля и других материалов, которые изготавливают мастера вручную. Также здесь можно отведать блюда армянской кухни в уютных ресторанах и кафе.
+
+Old Dilijan представляет собой настоящий культурный и исторический центр Армении, который не оставит равнодушным любого путешественника." />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                app:srcCompat="@drawable/tufenkyan" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

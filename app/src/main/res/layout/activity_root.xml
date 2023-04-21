@@ -19,16 +19,17 @@
         <Button
             android:id="@+id/first_button"
             android:layout_width="150dp"
-            android:layout_height="75dp"
+            android:layout_height="97dp"
+            android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
             android:backgroundTint="#F3E354"
+            android:onClick="goToAttractions"
             android:text="ДОСТОПРИМЕЧАТЕЛЬНОСТИ"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            android:layout_gravity="center_horizontal|top"/>
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/sec_button"
@@ -38,6 +39,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
             android:backgroundTint="#F3E354"
+            android:onClick="goToWalk"
             android:text="МЕСТА ДЛЯ ПРОГУЛОК"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,15 +50,16 @@
             android:id="@+id/third_button"
             android:layout_width="150dp"
             android:layout_height="75dp"
+            android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
             android:backgroundTint="#F3E354"
+            android:onClick="goToExpeditions"
             android:text="ПОХОДЫ"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            android:layout_gravity="center_horizontal|top" />
+            tools:ignore="MissingConstraints" />
 
     </LinearLayout>
 
