@@ -35,10 +35,24 @@
                 android:background="@drawable/tufenkyan"
                 android:contentDescription="TODO"/>
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textViewT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Старый Дилижан"
+                 />
+            <ImageButton
+                android:id="@+id/mimino"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:onClick="goMimino"
+                android:background="@drawable/tufenkyan"
+                android:contentDescription="TODO"/>
+            <TextView
+                android:id="@+id/textViewM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="памятник героям из фильма Мимино"
                  />
         </LinearLayout>
     </ScrollView>

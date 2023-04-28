@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
-                android:id="@+id/button_back"
+                android:id="@+id/button_back_tuf"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="top|left"

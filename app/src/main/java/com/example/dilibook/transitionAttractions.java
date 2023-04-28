@@ -21,4 +21,8 @@ public class transitionAttractions extends AppCompatActivity {
         Intent intent = new Intent(this, AttractionTuf.class);
         startActivity(intent);
     }
+    public void goMimino(View v){
+        Intent intent = new Intent(this, AttractionMimino.class);
+        startActivity(intent);
+    }
 }

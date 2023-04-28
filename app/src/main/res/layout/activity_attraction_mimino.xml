@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttractionTuf">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_back_mimino"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:backgroundTint="#F3E354"
+            android:gravity="left"
+            android:onClick="goBack"
+            android:text="НАЗАД"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="памятник героям из фильма Мимино"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint=" Памятник находится у автовокзала, на центральной развязке. Это памятник героям прекрасных актеров из культового фильма «Мимино: Фрунзика Мкртчяна (водитель грузовика Рубен Хачикян), Вахтанга Кикабидзе (вертолетчик Валико Мизандари) и Евгения Леонова (фронтовик Иван Волохов). Теперь они увековечены в бронзе. " />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/tufenkyan" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="Открытие летом 2011 года первого памятника любимым персонажам именно в Дилижане не случайно - ведь Рубик из «Мимино» является уроженцем этого города. Создание памятника в Дилижане стало возможным благодаря пожертвованиям меценатов из Владимирской области, в том числе представителей местной армянской общины" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

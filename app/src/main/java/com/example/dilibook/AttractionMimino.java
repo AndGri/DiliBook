@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AttractionTuf extends AppCompatActivity {
+public class AttractionMimino extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_attraction_tuf);
+        setContentView(R.layout.activity_attraction_mimino);
     }
     public void goBack(View v){
         Intent intent = new Intent(this, transitionAttractions.class);
