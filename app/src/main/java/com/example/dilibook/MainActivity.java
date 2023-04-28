@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 if(password.getText().toString().length() < 6){
-                    Snackbar.make(main,"Введите пароль, более 6 символов!", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(main,"Введите пароль, 6 и более символов!", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 if(password.getText().toString().length() < 6){
-                    Snackbar.make(main,"Введите пароль, более 6 символов!", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(main,"Введите пароль, 6 и более символов!", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
