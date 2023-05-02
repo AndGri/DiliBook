@@ -41,6 +41,21 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp" />
+    <Button
+        android:id="@+id/buttonGuest"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="132dp"
+        android:layout_weight="1"
+        android:backgroundTint="#F3E354"
+        android:onClick="goRootActivity"
+        android:text="GUEST MODE"
+        android:textColor="@android:color/white" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

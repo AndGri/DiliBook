@@ -153,5 +153,9 @@ public class MainActivity extends AppCompatActivity {
         });
         dialog.show();
     }
+    public void goRootActivity(View v){
+        Intent intent = new Intent(this, RootActivity.class);
+        startActivity(intent);
+    }
 
 }
