@@ -17,4 +17,8 @@ public class WalkShahumyan extends AppCompatActivity {
         Intent intent = new Intent(this, transitionForWalk.class);
         startActivity(intent);
     }
+    public void goToRoot(View v){
+        Intent intent = new Intent(this, RootActivity.class);
+        startActivity(intent);
+    }
 }

@@ -17,4 +17,8 @@ public class AttractionMimino extends AppCompatActivity {
         Intent intent = new Intent(this, transitionAttractions.class);
         startActivity(intent);
     }
+    public void goToRoot(View view) {
+        Intent intent = new Intent(this, RootActivity.class);
+        startActivity(intent);
+    }
 }

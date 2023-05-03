@@ -115,10 +115,10 @@ public class MainActivity extends AppCompatActivity {
         });dialog.setPositiveButton("Зарегистрировать", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-            if(TextUtils.isEmpty(email.getText().toString())){
-                Snackbar.make(main,"Введите почту!", Snackbar.LENGTH_SHORT).show();
-                return;
-            }
+                if(TextUtils.isEmpty(email.getText().toString())){
+                    Snackbar.make(main,"Введите почту!", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
                 if(TextUtils.isEmpty(name.getText().toString())){
                     Snackbar.make(main,"Введите имя!", Snackbar.LENGTH_SHORT).show();
                     return;
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
                             @Override
                             public void onSuccess(Void unused) {
-                            Snackbar.make(main,"Пользователь зарегестрирован!", Snackbar.LENGTH_SHORT).show();
+                                Snackbar.make(main,"Пользователь зарегестрирован!", Snackbar.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override

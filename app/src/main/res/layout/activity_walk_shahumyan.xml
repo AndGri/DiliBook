@@ -5,6 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AttractionTuf">
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#F3E354"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="goBack"
+        android:text="НАЗАД"
+        android:textColor="@android:color/white"/>
 
     <ScrollView
         android:layout_width="3570dp"
@@ -15,16 +25,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button_back"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top|left"
-                android:backgroundTint="#F3E354"
-                android:gravity="left"
-                android:onClick="goBack"
-                android:text="НАЗАД"
-                android:textColor="@android:color/white" />
+
 
             <TextView
                 android:id="@+id/textView"
@@ -33,7 +34,7 @@
                 android:text="Улица Шаумяна"
                 android:textSize="40sp" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Улица Шаумяна-прекрастое место лдя прогулки в любое время года, но особенно красиво тут бывает зимой․"
@@ -52,5 +53,16 @@
                 app:srcCompat="@drawable/shahumyan2" />
         </LinearLayout>
     </ScrollView>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:onClick="goToRoot"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/gohome" />
 
 </RelativeLayout>

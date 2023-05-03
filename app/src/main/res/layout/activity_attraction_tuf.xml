@@ -6,48 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".AttractionTuf">
 
+
+
+
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#F3E354"
+        android:onClick="goBack"
+        android:text="НАЗАД"
+        android:textColor="@android:color/white" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <Button
-                android:id="@+id/button_back_tuf"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top|left"
-                android:backgroundTint="#F3E354"
-                android:gravity="left"
-                android:onClick="goBack"
-                android:text="НАЗАД"
-                android:textColor="@android:color/white"/>
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="40sp"
-                android:text="Улица Шарамбеяна (Старый Дилижан)"/>
-            <EditText
+                android:text="Улица Шарамбеяна (Старый Дилижан)"
+                android:textSize="40sp" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:hint="Old Dilijan (Старый Дилижан) - это исторический район города Дилижан в Армении. А теперь представьте, какого это, проснуться утром и выглянув из окон своего номера, перенестись, на минуточку,  в 19 век, ведь именно архитектуру тех времен восстанавливал Джеймс Туфенкян реконструируя этот архитектурный ансамбль. " />
+                android:hint="Old Dilijan (Старый Дилижан) - это исторический район города Дилижан в Армении. А теперь представьте, какого это, проснуться утром и выглянув из окон своего номера, перенестись, на минуточку,  в 19 век, ведь именно архитектуру тех времен восстанавливал Джеймс Туфенкян реконструируя этот архитектурный ансамбль. "
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="400dp"
                 android:layout_height="400dp"
                 app:srcCompat="@drawable/tufenkyan" />
-            <EditText
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:hint="В 1800 годах армянский город Дилижан был известен как крупный центр культуры, торговли и национальной кухни. Чтобы порадовать глаз сказочными пейзажами Дилижана, сюда приезжало огромное количество богатых отдыхающих , благодаря чему здесь получила развитие и разнообразная культура. В 2004 году компания Туфенкян начала реставрационные работы в историческом районе современного Дилижана – улице Шарамбеян. Сегодня у вас есть возможность увидеть этот отрезок города таким, каким он был в XIX веке." />
+                android:hint="В 1800 годах армянский город Дилижан был известен как крупный центр культуры, торговли и национальной кухни. Чтобы порадовать глаз сказочными пейзажами Дилижана, сюда приезжало огромное количество богатых отдыхающих , благодаря чему здесь получила развитие и разнообразная культура. В 2004 году компания Туфенкян начала реставрационные работы в историческом районе современного Дилижана – улице Шарамбеян. Сегодня у вас есть возможность увидеть этот отрезок города таким, каким он был в XIX веке.                                                                                  "
+                android:textSize="25sp" />
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:onClick="goToRoot"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/gohome" />
 
 </RelativeLayout>

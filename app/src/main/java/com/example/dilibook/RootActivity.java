@@ -30,4 +30,5 @@ public class RootActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ExpeditionsActivity.class);
         startActivity(intent);
     }
+
 }

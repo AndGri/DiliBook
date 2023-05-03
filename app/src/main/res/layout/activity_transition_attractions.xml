@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="goToRoot"
     tools:context=".AttractionTuf">
+
     <Button
         android:id="@+id/button_back"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_gravity="top|left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:backgroundTint="#F3E354"
-        android:gravity="left"
         android:onClick="goBack"
         android:text="НАЗАД"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" />
+
+
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="478dp"
+        android:layout_height="589dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,31 +35,43 @@
                 android:id="@+id/tufenkyan"
                 android:layout_width="175dp"
                 android:layout_height="60dp"
-                android:onClick="goTuf"
                 android:background="@drawable/tufenkyan"
-                android:contentDescription="TODO"/>
+                android:contentDescription="TODO"
+                android:onClick="goTuf" />
+
             <TextView
                 android:id="@+id/textViewT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Старый Дилижан"
-                 />
+                android:text="Старый Дилижан" />
+
             <ImageButton
                 android:id="@+id/mimino"
                 android:layout_width="175dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="15dp"
-                android:onClick="goMimino"
                 android:background="@drawable/tufenkyan"
-                android:contentDescription="TODO"/>
+                android:contentDescription="TODO"
+                android:onClick="goMimino" />
+
             <TextView
                 android:id="@+id/textViewM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="памятник героям из фильма Мимино"
-                 />
+                android:text="памятник героям из фильма Мимино" />
+
         </LinearLayout>
     </ScrollView>
-
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:onClick="goToRoot"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/gohome" />
 
 </RelativeLayout>
