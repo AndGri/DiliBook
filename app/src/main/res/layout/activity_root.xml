@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgroot"
+    android:background="@drawable/bg"
     tools:context=".RootActivity">
 
     <LinearLayout
@@ -18,12 +18,12 @@
 
         <Button
             android:id="@+id/first_button"
-            android:layout_width="150dp"
-            android:layout_height="97dp"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
-            android:backgroundTint="#F3E354"
+            android:background="@drawable/btnstyle1"
             android:onClick="goToAttractions"
             android:text="ДОСТОПРИМЕЧАТЕЛЬНОСТИ"
             android:textColor="@android:color/white"
@@ -33,14 +33,14 @@
 
         <Button
             android:id="@+id/sec_button"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="75dp"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
-            android:backgroundTint="#F3E354"
+            android:background="@drawable/btnstyle1"
             android:onClick="goToWalk"
-            android:text="МЕСТА ДЛЯ ПРОГУЛОК"
+            android:text=" СКРЫТЫЕ МЕСТА"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,12 +48,12 @@
 
         <Button
             android:id="@+id/third_button"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="75dp"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="0dp"
-            android:backgroundTint="#F3E354"
+            android:background="@drawable/btnstyle1"
             android:onClick="goToExpeditions"
             android:text="ПОХОДЫ"
             android:textColor="@android:color/white"
@@ -68,10 +68,11 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="top|left"
-        android:backgroundTint="#F3E354"
-        android:gravity="left"
+        android:background="@drawable/btnstyle1"
+        android:gravity="center"
         android:onClick="goBack"
         android:text="ВЫЙТИ"
+        android:textSize="18sp"
         android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

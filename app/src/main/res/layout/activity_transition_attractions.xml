@@ -9,14 +9,15 @@
 
     <Button
         android:id="@+id/button_back"
-        android:layout_width="100dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
+        android:background="@drawable/btnstyle2"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#F3E354"
+        android:layout_alignParentLeft="true"
         android:onClick="goBack"
-        android:text="НАЗАД"
-        android:textColor="@android:color/white" />
+        android:text="❮"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"/>
 
 
 
@@ -72,6 +73,7 @@
         android:contentDescription="TODO"
         android:onClick="goToRoot"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/gohome" />
+        app:srcCompat="@drawable/gohome"
+        android:background="@null"/>
 
 </RelativeLayout>
