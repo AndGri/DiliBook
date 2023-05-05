@@ -29,18 +29,7 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="cursive"
-        android:text="@string/textbottom"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+
     <Button
         android:id="@+id/buttonGuest"
         android:layout_width="136dp"
@@ -50,26 +39,27 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="138dp"
         android:layout_marginEnd="138dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="175dp"
         android:layout_weight="1"
         android:background="@drawable/btnstyle1"
         android:onClick="goRootActivity"
         android:text="GUEST MODE"
         android:textColor="@android:color/white" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_above="@+id/text_bottom"
-        android:layout_marginTop="35dp"
-        android:layout_margin="20dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="650dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/buttonSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/btnstyle1"
             android:text="ВОЙТИ"
@@ -80,10 +70,10 @@
             android:id="@+id/buttonRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="@drawable/btnstyle1"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="10dp"
-            android:text="ЗАРЕГИСТРИРОВАТЬСЯ" />
+            android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </RelativeLayout>

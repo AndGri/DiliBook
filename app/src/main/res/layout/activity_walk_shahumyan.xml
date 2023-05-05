@@ -64,7 +64,7 @@
         android:contentDescription="TODO"
         android:onClick="goToRoot"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/gohome"
-        android:background="@null"/>
+        app:srcCompat="@drawable/gohome"/>
+<!--        android:background="@null"/>-->
 
 </RelativeLayout>
