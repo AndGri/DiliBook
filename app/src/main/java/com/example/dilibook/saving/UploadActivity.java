@@ -111,7 +111,7 @@ public class UploadActivity extends AppCompatActivity {
 
         DataClass dataClass = new DataClass(title, desc, imageURL);
 
-        FirebaseDatabase.getInstance().getReference("Android app").child(title).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseDatabase.getInstance().getReference("Expeditions").child(title).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){

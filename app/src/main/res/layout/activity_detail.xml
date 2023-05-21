@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/detailTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Название"
+        android:textSize="40sp"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:marginBottom="15dp"/>
+
+    <ImageView
+        android:id="@+id/detailImg"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:padding="10dp"
+        android:src="@drawable/uploadphoto"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/detailDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Описание"
+        android:padding="20dp"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

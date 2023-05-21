@@ -19,7 +19,7 @@ public class DataClass {
         return dataImage;
     }
 
-    public DataClass(String dataTitle, String dataDesc, String dataLang) {
+    public DataClass(String dataTitle, String dataDesc, String dataImage) {
         this.dataTitle = dataTitle;
         this.dataDesc = dataDesc;
         this.dataImage = dataImage;
