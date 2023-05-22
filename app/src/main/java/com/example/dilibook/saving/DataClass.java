@@ -24,4 +24,7 @@ public class DataClass {
         this.dataDesc = dataDesc;
         this.dataImage = dataImage;
     }
+    public DataClass(){
+
+    }
 }
