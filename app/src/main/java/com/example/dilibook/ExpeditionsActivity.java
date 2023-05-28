@@ -32,18 +32,19 @@ public class ExpeditionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expeditions);
         recyclerView = findViewById(R.id.recyclerview);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(ExpeditionsActivity.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ExpeditionsActivity.this);
         builder.setCancelable(false);
+//        builder.setView(R.layout.progressbar);
         AlertDialog dialog = builder.create();
         dialog.show();
 
         dataList = new ArrayList<>();
-        Adapter adapter = new Adapter(this, dataList);
+        Adapter adapter = new Adapter(ExpeditionsActivity.this, dataList);
         recyclerView.setAdapter(adapter);
-        databaseReference = FirebaseDatabase.getInstance().getReference("forTest");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Expeditions");
         dialog.show();
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {

@@ -9,7 +9,7 @@
     tools:context=".DetailActivity">
 
     <TextView
-        android:id="@+id/detailTopic"
+        android:id="@+id/detailTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -17,7 +17,7 @@
         android:textSize="40sp"
         android:padding="15dp"
         android:layout_gravity="center"
-        android:marginBottom="15dp"/>
+        android:layout_marginBottom="15dp"/>
 
     <ImageView
         android:id="@+id/detailImg"

@@ -19,11 +19,11 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<MyViewHolder> {
     private Context context;
-    private List<DataClass> datalist;
+    private List<DataClass> dataList;
 
-    public Adapter(Context context, List<DataClass> datalist) {
+    public Adapter(Context context, List<DataClass> dataList) {
         this.context = context;
-        this.datalist = datalist;
+        this.dataList = dataList;
     }
 
     @NonNull
@@ -35,17 +35,17 @@ public class Adapter extends RecyclerView.Adapter<MyViewHolder> {
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Glide.with(context).load(datalist.get(position).getDataImage()).into(holder.recImage);
-        holder.recTopic.setText(datalist.get(position).getDataImage());
-        holder.recDesc.setText(datalist.get(position).getDataDesc());
+        Glide.with(context).load(dataList.get(position).getDataImage()).into(holder.recImage);
+        holder.recTittle.setText(dataList.get(position).getDataTitle());
+        holder.recDesc.setText(dataList.get(position).getDataDesc());
 
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("Картинка", datalist.get(holder.getAdapterPosition()).getDataImage());
-                intent.putExtra("Название", datalist.get(holder.getAdapterPosition()).getDataTitle());
-                intent.putExtra("Описание", datalist.get(holder.getAdapterPosition()).getDataDesc());
+                intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
+                intent.putExtra("Tittle", dataList.get(holder.getAdapterPosition()).getDataTitle());
+                intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDesc());
 
                 context.startActivity(intent);
             }
@@ -54,20 +54,20 @@ public class Adapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return datalist.size();
+        return dataList.size();
 
     }
 }
 class MyViewHolder extends RecyclerView.ViewHolder{
 
     ImageView recImage;
-    TextView recTopic, recDesc;
+    TextView recTittle, recDesc;
     CardView recCard;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         recImage = itemView.findViewById(R.id.recyclerImg);
-        recTopic = itemView.findViewById(R.id.recyclerTopic);
+        recTittle = itemView.findViewById(R.id.recyclerTittle);
         recDesc = itemView.findViewById(R.id.recyclerDesc);
         recCard = itemView.findViewById(R.id.recyclerCard);
 
