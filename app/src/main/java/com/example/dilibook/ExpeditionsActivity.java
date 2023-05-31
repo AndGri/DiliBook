@@ -44,7 +44,7 @@ public class ExpeditionsActivity extends AppCompatActivity {
         dataList = new ArrayList<>();
         Adapter adapter = new Adapter(ExpeditionsActivity.this, dataList);
         recyclerView.setAdapter(adapter);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Expeditions");
+        databaseReference = FirebaseDatabase.getInstance().getReference("FORAPPEXP");
         dialog.show();
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {

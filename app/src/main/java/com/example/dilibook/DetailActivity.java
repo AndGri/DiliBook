@@ -9,20 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 
 public class DetailActivity extends AppCompatActivity {
-        TextView detailDesc, detailTittle;
+        TextView detailDesc, detailTitle;
         ImageView detailImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         detailImage = findViewById(R.id.detailImg);
-        detailTittle = findViewById(R.id.detailTittle);
+        detailTitle = findViewById(R.id.detailTitle);
         detailDesc = findViewById(R.id.detailDesc);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             detailDesc.setText(bundle.getString("Description"));
-            detailTittle.setText(bundle.getString("Title"));
+            detailTitle.setText(bundle.getString("Title"));
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
 
 

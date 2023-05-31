@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="goToRoot"
     tools:context=".AttractionTuf">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -40,22 +39,22 @@
         android:text="+" />
 
 
-    <ScrollView
-        android:layout_width="478dp"
-        android:layout_height="589dp"
-        android:layout_above="@+id/imageButton"
-        android:layout_marginBottom="15dp"
-        android:importantForAccessibility="no">
+<!--    <ScrollView-->
+<!--        android:layout_width="478dp"-->
+<!--        android:layout_height="589dp"-->
+<!--        android:layout_above="@+id/imageButton"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:importantForAccessibility="no">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
 
 
-        </LinearLayout>
-    </ScrollView>
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"

@@ -22,11 +22,18 @@
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Загрузить данные"
             android:textSize="30sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="вы можете загрузить данные если вы уже зарегистрированы"
+            android:textSize="15sp"
             android:textAlignment="center"/>
         <ImageView
             android:layout_width="match_parent"
