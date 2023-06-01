@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".RootActivity">
+    tools:context=".RootActivity"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -63,21 +64,38 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_back"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+<!--    <Button-->
+<!--        android:id="@+id/button_back"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:background="@drawable/btnstyle1"-->
+<!--        android:gravity="center"-->
+<!--        android:onClick="goBack"-->
+<!--        android:text="ВЫЙТИ"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        />-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNav"
         android:background="@drawable/btnstyle1"
-        android:gravity="center"
-        android:onClick="goBack"
-        android:text="ВЫЙТИ"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="2dp"
+        app:menu="@menu/menu_bottom_navigation"/>
+<!--        app:ItemIconSize="30dp"-->
+<!--        app:ItemIconTint="@drawable/item_selector"-->
+<!--        />-->
 
 
 </RelativeLayout>

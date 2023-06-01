@@ -2,10 +2,12 @@ package com.example.dilibook;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.dilibook.saving.UploadActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class RootActivity extends AppCompatActivity {
 
@@ -13,11 +15,25 @@ public class RootActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
-    }
-    public void goBack(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
 
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
+        bottomNavigationView.setSelectedItemId(R.id.action_home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch(item.getItemId()){
+                case R.id.action_home:
+                    return true;
+                case R.id.action_back:
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    finish();
+                    return true;
+                case R.id.action_add:
+                    startActivity(new Intent(getApplicationContext(), UploadActivity.class));
+                    finish();
+                    return true;
+            }
+            return false;
+        });
     }
     public void goToAttractions(View v){
         Intent intent = new Intent(this, transitionAttractions.class);

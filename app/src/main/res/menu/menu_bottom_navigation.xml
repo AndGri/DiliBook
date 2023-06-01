@@ -3,16 +3,13 @@
     <item
         android:id="@+id/action_back"
         android:icon="@drawable/back"
-        android:onClick="goBack"
         android:title="назад"/>
     <item
         android:id="@+id/action_home"
         android:icon="@drawable/gohome"
-        android:onClick="goToRoot"
         android:title="домой" />
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/add"
-        android:onClick="goContentAdd"
         android:title="добавить" />
 </menu>

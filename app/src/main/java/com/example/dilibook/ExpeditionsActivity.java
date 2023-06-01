@@ -2,7 +2,6 @@ package com.example.dilibook;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -12,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dilibook.saving.DataClass;
 import com.example.dilibook.saving.UploadActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,7 +44,7 @@ public class ExpeditionsActivity extends AppCompatActivity {
         dataList = new ArrayList<>();
         Adapter adapter = new Adapter(ExpeditionsActivity.this, dataList);
         recyclerView.setAdapter(adapter);
-        databaseReference = FirebaseDatabase.getInstance().getReference("FORAPPEXP");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Expeditions");
         dialog.show();
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
@@ -64,20 +64,25 @@ public class ExpeditionsActivity extends AppCompatActivity {
             dialog.dismiss();
             }
         });
-    }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
+        bottomNavigationView.setSelectedItemId(R.id.action_home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.action_home:
+                    startActivity(new Intent(getApplicationContext(), RootActivity.class));
+                    finish();
+                    return true;
+                case R.id.action_back:
+                    startActivity(new Intent(getApplicationContext(), RootActivity.class));
+                    finish();
+                    return true;
+                case R.id.action_add:
+                    startActivity(new Intent(getApplicationContext(), UploadActivity.class));
+                    finish();
+                    return true;
+            }
+            return false;
+        });
+        }
 
-    public void goToRoot(View v){
-        Intent intent = new Intent(this, RootActivity.class);
-        startActivity(intent);
-    }
-
-    public void goBack(View v){
-        Intent intent = new Intent(this, RootActivity.class);
-        startActivity(intent);
-    }
-
-    public void goContentAdd(View v){
-        Intent intent = new Intent(this, UploadActivity.class);
-        startActivity(intent);
-    }
 }

@@ -18,43 +18,50 @@
         android:layout_marginBottom="10dp"
         android:textColor="@android:color/black"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/imageButton"
+        android:orientation="vertical">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Улица Шарамбеяна (Старый Дилижан)"
-                android:textSize="40sp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Old Dilijan (Старый Дилижан) - это исторический район города Дилижан в Армении. А теперь представьте, какого это, проснуться утром и выглянув из окон своего номера, перенестись, на минуточку,  в 19 век, ведь именно архитектуру тех времен восстанавливал Джеймс Туфенкян реконструируя этот архитектурный ансамбль. "
-                android:textSize="25sp" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Улица Шарамбеяна (Старый Дилижан)"
+                    android:textSize="40sp" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="400dp"
-                android:layout_height="400dp"
-                app:srcCompat="@drawable/tufenkyan" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Старый Дилижан (Old Dilijan) - это исторический район города Дилижан в Армении. А теперь представьте, какого это, проснуться утром и выглянув из окон своего номера, перенестись, на минуточку, в 19 век, ведь именно архитектуру тех времен восстанавливал Джеймс Туфенкян, реконструируя этот архитектурный ансамбль."
+                    android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="В 1800 годах армянский город Дилижан был известен как крупный центр культуры, торговли и национальной кухни. Чтобы порадовать глаз сказочными пейзажами Дилижана, сюда приезжало огромное количество богатых отдыхающих , благодаря чему здесь получила развитие и разнообразная культура. В 2004 году компания Туфенкян начала реставрационные работы в историческом районе современного Дилижана – улице Шарамбеян. Сегодня у вас есть возможность увидеть этот отрезок города таким, каким он был в XIX веке.                                                                                  "
-                android:textSize="25sp" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
+                    app:srcCompat="@drawable/tufenkyan" />
 
-        </LinearLayout>
-    </ScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="В 1800 годах армянский город Дилижан был известен как крупный центр культуры, торговли и национальной кухни. Чтобы порадовать глаз сказочными пейзажами Дилижана, сюда приезжало огромное количество богатых отдыхающих, благодаря чему здесь получила развитие и разнообразная культура. В 2004 году компания Туфенкян начала реставрационные работы в историческом районе современного Дилижана - улице Шарамбеян. Сегодня у вас есть возможность увидеть этот отрезок города таким, каким он был в XIX веке."
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/imageButton"
