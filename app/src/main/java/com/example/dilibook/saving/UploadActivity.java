@@ -19,10 +19,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dilibook.R;
+import com.example.dilibook.RootActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -76,6 +78,24 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View view) {
                 saveData();
             }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
+        bottomNavigationView.setSelectedItemId(R.id.action_home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch(item.getItemId()){
+                case R.id.action_add:
+                    return true;
+                case R.id.action_back:
+                    startActivity(new Intent(getApplicationContext(), RootActivity.class));
+                    finish();
+                    return true;
+                case R.id.action_home:
+                    startActivity(new Intent(getApplicationContext(), RootActivity.class));
+                    finish();
+                    return true;
+            }
+            return false;
         });
     }
 

@@ -48,6 +48,20 @@
             app:met_minCharacters="6"
             app:met_maxCharacters="20"
             />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userPasswordConfirm"
+            android:hint="Повторите пароль"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/ripple"
+            android:textSize="25sp"
+            app:met_floatingLabel="normal"
+            app:met_minCharacters="6"
+            app:met_maxCharacters="20"
+            />
 
 
     </LinearLayout>

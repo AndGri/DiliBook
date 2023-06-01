@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         MaterialEditText email = window_register.findViewById(R.id.userEmail);
         MaterialEditText name = window_register.findViewById(R.id.userName);
         MaterialEditText password = window_register.findViewById(R.id.userPassword);
+        MaterialEditText confirmPassword = window_register.findViewById(R.id.userPasswordConfirm);
+
         dialog.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(password.getText().toString().length() < 6){
                     Snackbar.make(main,"Введите пароль, 6 и более символов!", Snackbar.LENGTH_LONG).show();
+                    return;
+                }
+                if (!TextUtils.equals(password.getText().toString(), confirmPassword.getText().toString())) {
+                    Snackbar.make(main, "Пароли не совпадают", Snackbar.LENGTH_SHORT).show();
                     return;
                 }
 
