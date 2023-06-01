@@ -35,6 +35,7 @@
         android:padding="20dp"
         android:textSize="30sp"
         android:layout_gravity="center"
+        android:layout_above="@id/bottomNav"
         />
 
 
