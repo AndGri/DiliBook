@@ -27,8 +27,8 @@
 
         <TextView
             android:id="@+id/recyclerTittle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="10dp"
             android:text="Название"
