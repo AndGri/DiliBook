@@ -5,54 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="goToRoot"
-    tools:context=".AttractionTuf">
+    tools:context=".transitionAttractions">
 
 
-
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_above="@id/bottomNav"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_above="@id/bottomNav"
-            android:orientation="vertical">
-
-
-            <ImageButton
-                android:id="@+id/tufenkyan"
-                android:layout_width="175dp"
-                android:layout_height="60dp"
-                android:background="@drawable/tufenkyan"
-                android:contentDescription="TODO"
-                android:onClick="goTuf" />
-
-            <TextView
-                android:id="@+id/textViewT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Старый Дилижан" />
-
-            <ImageButton
-                android:id="@+id/mimino"
-                android:layout_width="175dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/tufenkyan"
-                android:contentDescription="TODO"
-                android:onClick="goMimino" />
-
-            <TextView
-                android:id="@+id/textViewM"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="памятник героям из фильма Мимино" />
-
-        </LinearLayout>
-    </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
