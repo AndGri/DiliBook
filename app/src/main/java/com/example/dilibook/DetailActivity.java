@@ -38,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.action_back:
-                        startActivity(new Intent(getApplicationContext(), ExpeditionsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), RootActivity.class));
                         finish();
                         return true;
                     case R.id.action_add:
