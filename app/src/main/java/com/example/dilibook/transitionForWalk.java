@@ -86,8 +86,4 @@ public class transitionForWalk extends AppCompatActivity {
             return false;
         });
     }
-    public void goShahumyan(View v){
-        Intent intent = new Intent(this, WalkShahumyan.class);
-        startActivity(intent);
-    }
 }

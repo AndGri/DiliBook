@@ -23,7 +23,7 @@ public class RootActivity extends AppCompatActivity {
             switch(item.getItemId()){
                 case R.id.action_home:
                     return true;
-                case R.id.action_back:
+                case R.id.action_logout:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                     return true;
