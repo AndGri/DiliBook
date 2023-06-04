@@ -88,7 +88,8 @@ public class UploadActivity extends AppCompatActivity {
                 case R.id.action_add:
                     return true;
                 case R.id.action_back:
-                    onBackPressed();
+                    startActivity(new Intent(getApplicationContext(), ExpeditionsActivity.class));
+                    finish();
                     return true;
                 case R.id.action_home:
                     startActivity(new Intent(getApplicationContext(), RootActivity.class));
