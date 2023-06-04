@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dilibook.saving.DataClass;
-import com.example.dilibook.saving.UploadActivity;
+import com.example.dilibook.saving.UploadHiddenActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -75,11 +75,10 @@ public class transitionForWalk extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.action_back:
-                    startActivity(new Intent(getApplicationContext(), RootActivity.class));
-                    finish();
+                    onBackPressed();
                     return true;
                 case R.id.action_add:
-                    startActivity(new Intent(getApplicationContext(), UploadActivity.class));
+                    startActivity(new Intent(getApplicationContext(), UploadHiddenActivity.class));
                     finish();
                     return true;
             }

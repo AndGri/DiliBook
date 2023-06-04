@@ -18,9 +18,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dilibook.ExpeditionsActivity;
 import com.example.dilibook.R;
 import com.example.dilibook.RootActivity;
+import com.example.dilibook.transitionForWalk;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,7 +31,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class UploadActivity extends AppCompatActivity {
+public class UploadHiddenActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
@@ -43,7 +43,7 @@ public class UploadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload);
+        setContentView(R.layout.activity_upload_hidden);
 
         uploadImage = findViewById(R.id.uploadImage);
         uploadTopic = findViewById(R.id.uploadTopic);
@@ -61,7 +61,7 @@ public class UploadActivity extends AppCompatActivity {
                             uri = data.getData();
                             uploadImage.setImageURI(uri);
                         } else{
-                            Toast.makeText(UploadActivity.this, "Изображение не выбрано", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadHiddenActivity.this, "Изображение не выбрано", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -119,7 +119,7 @@ public class UploadActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(UploadActivity.this, "Ошибка при загрузке изображения: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(UploadHiddenActivity.this, "Ошибка при загрузке изображения: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
 
             }
@@ -131,18 +131,18 @@ public class UploadActivity extends AppCompatActivity {
 
         DataClass dataClass = new DataClass(title, desc, imageURL);
 
-        FirebaseDatabase.getInstance().getReference("Expeditions").child(title).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseDatabase.getInstance().getReference("HiddenPlaces").child(title).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(UploadActivity.this, "Сохранено", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadHiddenActivity.this, "Сохранено", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(UploadHiddenActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

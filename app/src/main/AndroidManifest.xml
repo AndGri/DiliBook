@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +15,11 @@
         android:theme="@style/Theme.DiliBook"
         tools:targetApi="31">
         <activity
+            android:name=".saving.UploadHiddenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".DetailActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -23,10 +27,7 @@
             android:name=".saving.UploadActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".AttractionMimino"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".transitionForWalk"
             android:exported="false"
@@ -46,7 +47,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

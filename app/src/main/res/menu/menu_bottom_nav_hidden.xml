@@ -11,5 +11,5 @@
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/add"
-        android:title="добавить поход" />
+        android:title="добавить скрытое место" />
 </menu>

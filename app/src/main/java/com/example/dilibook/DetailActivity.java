@@ -38,10 +38,9 @@ public class DetailActivity extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.action_back:
-                        startActivity(new Intent(getApplicationContext(), RootActivity.class));
-                        finish();
+                        onBackPressed();
                         return true;
-                    case R.id.action_add:
+                        case R.id.action_add:
                         startActivity(new Intent(getApplicationContext(), UploadActivity.class));
                         finish();
                         return true;
