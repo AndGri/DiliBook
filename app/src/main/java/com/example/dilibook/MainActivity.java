@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -20,24 +21,26 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
-    Button buttonSignIn,buttonRegister;
+    Button  buttonGuest,buttonSignIn,buttonRegister;
     FirebaseAuth auth;
     FirebaseDatabase bc;
     DatabaseReference users;
     RelativeLayout main;
-
+    boolean isGuestMode = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         buttonSignIn = findViewById(R.id.buttonSignIn);
         buttonRegister = findViewById(R.id.buttonRegister);
+        buttonGuest = findViewById(R.id.buttonGuest);
         main = findViewById(R.id.windows);
         auth = FirebaseAuth.getInstance();
         bc = FirebaseDatabase.getInstance();
@@ -46,17 +49,41 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showRegisterWindow();
+
+                    showRegisterWindow();
+
             }
         });
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showSignInWindow();
+
             }
         });
+        buttonGuest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            goRootActivity();
+            }
+        });
+
+        checkUserStatus();
     }
 
+    private void goRootActivity() {
+        Intent intent = new Intent(this, RootActivity.class);
+        startActivity(intent);
+    }
+
+    private void checkUserStatus() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null && user.isEmailVerified()) {
+            isGuestMode = false;
+        } else {
+            isGuestMode = true;
+        }
+    }
 
 
     private void showRegisterWindow() {
@@ -80,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(TextUtils.isEmpty(email.getText().toString())){
                     Snackbar.make(main,"Введите почту!", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+                    Snackbar.make(main, "Неправильный формат email", Snackbar.LENGTH_SHORT).show();
                     return;
                 }
                 if(TextUtils.isEmpty(name.getText().toString())){
@@ -155,17 +186,22 @@ public class MainActivity extends AppCompatActivity {
                             finish();
                             Intent intent = new Intent(getApplicationContext(), RootActivity.class);
                             startActivity(intent);
-                        } else {
-                            Snackbar.make(main,"Ошибка входа", Snackbar.LENGTH_LONG).show();
+                        }
+                        else {
+                            Snackbar.make(main, "Адрес электронной почты не подтвержден", Snackbar.LENGTH_LONG).show();
                             return;
                         }
-
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(main, "ошибка входа  " + e.getMessage(), Snackbar.LENGTH_SHORT);
+                        if (e instanceof FirebaseAuthInvalidCredentialsException) {
+                            Snackbar.make(main, "Неверный пароль", Snackbar.LENGTH_LONG).show();
+                        }
+                        else{ Snackbar.make(main, "Ошибка входа  " + e.getMessage(), Snackbar.LENGTH_SHORT);
                     }
+                    }
+
                 });
             }
 
@@ -173,11 +209,5 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
-
-    public void goRootActivity(View v){
-        Intent intent = new Intent(this, RootActivity.class);
-        startActivity(intent);
-    }
 
 }
