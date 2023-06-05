@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 import com.example.dilibook.saving.UploadActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -30,6 +32,7 @@ public class RootActivity extends AppCompatActivity {
                     builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            FirebaseAuth.getInstance().signOut();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             finish();
                             dialog.dismiss();

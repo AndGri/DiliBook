@@ -7,7 +7,7 @@
     <item
         android:id="@+id/action_home"
         android:icon="@drawable/gohome"
-        android:title="домой" />
+        android:title="главная" />
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/add"

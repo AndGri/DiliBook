@@ -43,7 +43,7 @@
         android:layout_weight="1"
         android:background="@drawable/btnstyle1"
         android:onClick="goRootActivity"
-        android:text="GUEST MODE"
+        android:text="ГОСТЕВОЙ РЕЖИМ"
         android:textColor="@android:color/white" />
 
     <LinearLayout

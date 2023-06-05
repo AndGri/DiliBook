@@ -4,12 +4,4 @@
         android:id="@+id/action_logout"
         android:icon="@drawable/logout"
         android:title="выйти"/>
-<!--    <item-->
-<!--        android:id="@+id/action_home"-->
-<!--        android:icon="@drawable/gohome"-->
-<!--        android:title="домой" />-->
-<!--    <item-->
-<!--        android:id="@+id/action_add"-->
-<!--        android:icon="@drawable/add"-->
-<!--        android:title="добавить походы" />-->
 </menu>

@@ -26,6 +26,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -39,6 +41,9 @@ public class UploadHiddenActivity extends AppCompatActivity {
     String imageURL;
     Uri uri;
 
+    boolean isGuestMode;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,7 @@ public class UploadHiddenActivity extends AppCompatActivity {
         uploadDesc = findViewById(R.id.uploadDesc);
         saveButton = findViewById(R.id.saveButton);
 
+        checkGuestMode();
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -77,7 +83,15 @@ public class UploadHiddenActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveData();
+                if (isGuestMode) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(UploadHiddenActivity.this);
+                    builder.setTitle("Ошибка");
+                    builder.setMessage("Добавление информации в режиме гостя недоступно");
+                    builder.setPositiveButton("Ок", null);
+                    builder.show();
+                } else {
+                    saveData();
+                }
             }
         });
 
@@ -98,6 +112,15 @@ public class UploadHiddenActivity extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    private void checkGuestMode() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null && user.isEmailVerified()) {
+            isGuestMode = false;
+        } else {
+            isGuestMode = true;
+        }
     }
 
     public void saveData(){
