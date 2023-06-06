@@ -40,10 +40,6 @@ public class DetailActivity extends AppCompatActivity {
                     case R.id.action_back:
                         onBackPressed();
                         return true;
-                        case R.id.action_add:
-                        startActivity(new Intent(getApplicationContext(), UploadActivity.class));
-                        finish();
-                        return true;
                 }
                 return false;
             });
